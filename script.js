@@ -62,7 +62,7 @@ function getWinner() {
         alert(`You lost! ${computerChoice} beats ${playerChoice}.`)
     } else if (winner === "player") { 
         alert(`You won! ${playerChoice} beats ${computerChoice}.`)
-    }
+    } else alert("Tie!")
     return winner;
 } 
 function getScore() { 
