@@ -42,27 +42,39 @@ function getWinner() {
             winner = "computer";
         } else if(computerChoice === "SCISSORS") { 
             winner = "player"; 
-        } else winner = "tie";
+        } else winner = "tie"; 
+        break;
 
         case "PAPER": 
         if(computerChoice === "SCISSORS") { 
             winner = "computer";
         } else if(computerChoice === "ROCK") { 
             winner = "player"; 
-        } else winner = "tie";
+        } else winner = "tie"; 
+        break;
 
         case "SCISSORS": 
         if(computerChoice === "ROCK") { 
             winner = "computer";
         } else if(computerChoice === "PAPER") { 
             winner = "player"; 
-        } else winner = "tie";
+        } else winner = "tie"; 
+        break;
     } 
-    if (winner === "computer") { 
-        alert(`You lost! ${computerChoice} beats ${playerChoice}.`)
-    } else if (winner === "player") { 
-        alert(`You won! ${playerChoice} beats ${computerChoice}.`)
-    } else alert("Tie!")
+    switch(winner) { 
+        case "computer": 
+        alert(`You lost! ${computerChoice} beats ${playerChoice}.`); 
+        break; 
+
+        case "player": 
+        alert(`You won! ${playerChoice} beats ${computerChoice}.`) 
+        break; 
+
+        case "tie": 
+        alert(`Tie!`) 
+        break;
+
+    }
     return winner;
 } 
 function getScore() { 
@@ -72,6 +84,19 @@ function getScore() {
         playerScore++;
     }
 } 
-
+for(let i = 1; i <= numberOfRounds; i++) { 
+    getComputerChoice(); 
+    getPlayerChoice(); 
+    getWinner(); 
+    getScore(); 
+    alert(`The score is ${playerScore} - ${computerScore}.`); 
+    if (i === numberOfRounds) { 
+        alert(`The game is over! The final score is Player - ${playerScore}, Computer - ${computerScore}`);
+        if (computerScore > playerScore) { 
+            alert("You lost!"); 
+        } else if (playerScore > computerScore) { 
+            alert("You won!");
+        } else alert("Tie!")
+    } 
     
-
+}
