@@ -58,4 +58,10 @@ function getWinner() {
     } 
     return winner;
 } 
-
+function getScore() { 
+    if(winner === "computer") { 
+        computerScore++;
+    } else if (winner === "player") { 
+        playerScore++;
+    }
+}
