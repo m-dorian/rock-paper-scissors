@@ -2,7 +2,9 @@ let computerChoice;
 let playerChoice; 
 let winner; 
 let playerScore = 0;
-let computerScore = 0;
+let computerScore = 0; 
+
+let numberOfRounds = Number(prompt("How many rounds do you want to play?"));
 
 function getRandomInteger (min, max) { 
     return Math.floor(Math.random() * (max - min + 1)) + min;
