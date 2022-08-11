@@ -1,8 +1,14 @@
+let computerChoice; 
+let playerChoice; 
+let winner; 
+let playerScore = 0;
+let computerScore = 0;
+
 function getRandomInteger (min, max) { 
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function getComputerChoice() { 
-    let computerChoice = getRandomInteger(1, 3);  
+     computerChoice = getRandomInteger(1, 3);  
     switch(computerChoice) { 
         case 1: 
         computerChoice = "ROCK"; 
@@ -18,11 +24,38 @@ function getComputerChoice() {
 } 
 function getPlayerChoice() { 
     let tempPlayerChoice = prompt("What weapon do you select? Rock, paper or scissors?!");
-    let playerChoice = tempPlayerChoice.toUpperCase(); 
+    // Make user input case insensitive //
+    playerChoice = tempPlayerChoice.toUpperCase(); 
      if(playerChoice === "ROCK" || playerChoice === "PAPER" || playerChoice === "SCISSORS") { 
         alert("Valid! You can play the game!")
     } else alert("Invalid! Try again") 
     return playerChoice;
     
 }
-getPlayerChoice();
+function getWinner() { 
+     
+    switch(playerChoice) { 
+        case "ROCK": 
+        if(computerChoice === "PAPER") { 
+            winner = "computer";
+        } else if(computerChoice === "SCISSORS") { 
+            winner = "player"; 
+        } else winner = "tie";
+
+        case "PAPER": 
+        if(computerChoice === "SCISSORS") { 
+            winner = "computer";
+        } else if(computerChoice === "ROCK") { 
+            winner = "player"; 
+        } else winner = "tie";
+
+        case "SCISSORS": 
+        if(computerChoice === "ROCK") { 
+            winner = "computer";
+        } else if(computerChoice === "PAPER") { 
+            winner = "player"; 
+        } else winner = "tie";
+    } 
+    return winner;
+} 
+
