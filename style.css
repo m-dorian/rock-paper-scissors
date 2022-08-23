@@ -32,4 +32,36 @@ html, body {
     display: flex; 
     gap: 30px; 
     font-size: 40px;
+} 
+
+.buttons { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center ; 
+    margin-bottom: 5px; 
+    gap: 10px; 
+    padding: 10px
+} 
+
+.button { 
+    flex-grow: 1; 
+    display: flex ;
+    border: 2px solid; 
+    border-radius: 8px; 
+    justify-content: center; 
+    font-size: 50px; 
+    padding: 10px; 
+} 
+
+.rock { 
+    border-color: red;
+} 
+
+.paper { 
+
+    border-color: green;
+} 
+
+.scissors { 
+    border-color: blue;
 }
