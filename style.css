@@ -17,9 +17,10 @@ html, body {
 
 .header { 
     display: flex; 
-    justify-content: center; 
+    justify-content: space-around; 
     font-size: 60px; 
     margin-top: 10px;
+
 }  
 
 .main-content { 
@@ -37,7 +38,7 @@ html, body {
 
 .buttons { 
     display: flex; 
-    justify-content: space-around; 
+    justify-content: space-between; 
     align-items: center ; 
     margin-bottom: 5px; 
     gap: 10px; 
@@ -65,4 +66,20 @@ html, body {
 
 #scissors { 
     border-color: blue;
+} 
+
+.play-button { 
+    background-color: darkslategray; 
+    height: 58px; 
+    width: 255px; 
+    border: 2px solid orange; 
+    border-radius: 8px; 
+    font-size: 45px; 
+    
+    
+} 
+
+.blank { 
+    height: 58px; 
+    width: 255px;
 }
