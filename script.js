@@ -4,8 +4,6 @@ let winner;
 let playerScore = 0;
 let computerScore = 0; 
 
-let numberOfRounds = Number(prompt("How many rounds do you want to play?"));
-
 function getRandomInteger (min, max) { 
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -84,19 +82,24 @@ function getScore() {
         playerScore++;
     }
 } 
-for(let i = 1; i <= numberOfRounds; i++) { 
-    getComputerChoice(); 
-    getPlayerChoice(); 
-    getWinner(); 
-    getScore(); 
-    alert(`The score is ${playerScore} - ${computerScore}.`); 
-    if (i === numberOfRounds) { 
-        alert(`The game is over! The final score is Player - ${playerScore}, Computer - ${computerScore}`);
-        if (computerScore > playerScore) { 
-            alert("You lost!"); 
-        } else if (playerScore > computerScore) { 
-            alert("You won!");
-        } else alert("Tie!")
-    } 
+
+window.addEventListener('click', function(e){ 
+    let className = e.target.className; 
+    let idName = e.target.id; 
+    const playerDisplay = document.querySelector('.player-display'); 
+    switch(idName) { 
+
+        case 'paper': 
+        playerDisplay.textContent = '🤚️'; 
+        break;
+
+        case 'rock': 
+        playerDisplay.textContent = '✊️'; 
+        break; 
+
+        case 'scissors': 
+        playerDisplay.textContent = '✌️'; 
+        break;
+    }
     
-}
+})
