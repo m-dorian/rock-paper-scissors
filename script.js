@@ -8,18 +8,22 @@ function getRandomInteger (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function getComputerChoice() { 
-     computerChoice = getRandomInteger(1, 3);  
+     computerChoice = getRandomInteger(1, 3); 
+     const computerDisplay = document.querySelector('.computer-display');
     switch(computerChoice) { 
         case 1: 
         computerChoice = "ROCK"; 
+        computerDisplay.textContent = '✊️'; 
         break; 
         case 2: 
         computerChoice = "PAPER"; 
+        computerDisplay.textContent = '🤚️';
         break; 
         case 3: 
         computerChoice = "SCISSORS"; 
+        computerDisplay.textContent = '✌️';
         break;
-    }
+    } 
     return computerChoice;
 } 
 function getPlayerChoice() { 
@@ -99,7 +103,9 @@ window.addEventListener('click', function(e){
 
         case 'scissors': 
         playerDisplay.textContent = '✌️'; 
-        break;
+        break;  
     }
-    
-})
+    getComputerChoice();
+}) 
+
+
