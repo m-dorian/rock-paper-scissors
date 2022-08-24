@@ -53,15 +53,15 @@ html, body {
     padding: 10px; 
 } 
 
-.rock { 
+#rock { 
     border-color: red;
 } 
 
-.paper { 
+#paper { 
 
     border-color: green;
 } 
 
-.scissors { 
+#scissors { 
     border-color: blue;
 }
