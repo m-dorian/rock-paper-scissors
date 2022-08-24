@@ -31,8 +31,9 @@ html, body {
 .selection-display { 
     display: flex; 
     gap: 30px; 
-    font-size: 40px;
+    font-size: 120px;
 } 
+
 
 .buttons { 
     display: flex; 
