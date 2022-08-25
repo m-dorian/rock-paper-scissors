@@ -63,20 +63,6 @@ function getWinner() {
         } else winner = "tie"; 
         break;
     } 
-    switch(winner) { 
-        case "computer": 
-        alert(`You lost! ${computerChoice} beats ${playerChoice}.`); 
-        break; 
-
-        case "player": 
-        alert(`You won! ${playerChoice} beats ${computerChoice}.`) 
-        break; 
-
-        case "tie": 
-        alert(`Tie!`) 
-        break;
-
-    }
     return winner;
 } 
 function getScore() { 
@@ -88,24 +74,25 @@ function getScore() {
 } 
 
 window.addEventListener('click', function(e){ 
-    let className = e.target.className; 
     let idName = e.target.id; 
     const playerDisplay = document.querySelector('.player-display'); 
     switch(idName) { 
 
         case 'paper': 
         playerDisplay.textContent = '🤚️'; 
+        playerChoice = 'PAPER'
         break;
 
         case 'rock': 
         playerDisplay.textContent = '✊️'; 
+        playerChoice = 'ROCK'; 
         break; 
 
         case 'scissors': 
         playerDisplay.textContent = '✌️'; 
+        playerChoice = 'SCISSORS'; 
         break;  
     }
     getComputerChoice();
 }) 
-
 
