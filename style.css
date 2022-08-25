@@ -79,11 +79,6 @@ html, body {
     
 } 
 
-.blank { 
-    height: 58px; 
-    width: 255px;
-} 
-
 .winner-display { 
     text-align: center;
     font-size: 45px;  
@@ -100,3 +95,13 @@ html, body {
     width: 158px;
 } 
 
+.reset-button { 
+    background-color: darkslategray; 
+    height: 58px; 
+    width: 255px; 
+    border: 2px solid rgb(47, 214, 200); 
+    border-radius: 8px; 
+    font-size: 45px;  
+    text-align: center;
+     
+}

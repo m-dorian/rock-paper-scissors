@@ -131,3 +131,9 @@ playButton.addEventListener('click', function(){
 scoreDisplay.textContent = `Score: ${playerScore} - ${computerScore}`;
       
 }) 
+
+const resetButton = document.querySelector('.reset-button'); 
+
+resetButton.addEventListener('click', () => { 
+    window.location.reload();
+})
