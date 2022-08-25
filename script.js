@@ -93,6 +93,33 @@ window.addEventListener('click', function(e){
         playerChoice = 'SCISSORS'; 
         break;  
     }
-    getComputerChoice();
 }) 
 
+const playButton = document.querySelector('.play-button'); 
+
+playButton.addEventListener('click', function(){ 
+    const winnerDisplay = document.querySelector('.winner-display');
+    if(typeof(playerChoice) == 'undefined') { 
+        alert('You have to choose a weapon before you can play!'); 
+    } 
+    getComputerChoice(); 
+    getWinner();
+    switch(winner){ 
+        case 'player': 
+        winnerDisplay.textContent = 'Player Won!'; 
+        winnerDisplay.style.backgroundColor = 'green';
+        break; 
+
+        case 'computer': 
+        winnerDisplay.textContent = 'Computer Won!'; 
+        winnerDisplay.style.backgroundColor = 'red';
+        break; 
+
+        case 'tie': 
+        winnerDisplay.textContent = 'Tie!'; 
+        winnerDisplay.style.backgroundColor = 'purple';
+        break; 
+        
+        
+    }
+})
