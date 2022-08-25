@@ -26,7 +26,7 @@ html, body {
 .main-content { 
     display: flex; 
     padding:  50px;  
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .selection-display { 
@@ -82,4 +82,25 @@ html, body {
 .blank { 
     height: 58px; 
     width: 255px;
+} 
+
+.winner-display { 
+    text-align: center;
+    font-size: 45px;  
+    font-weight: 500; 
+    height: 138px; 
+    width: 158px;
+} 
+
+.blank-two { 
+    height: 138px;
+    width: 158px;
+} 
+
+.computer-won { 
+    background-color: red;
+}
+
+.player-won { 
+    background-color: rgb(19, 194, 19);
 }
