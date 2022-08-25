@@ -92,15 +92,11 @@ html, body {
     width: 158px;
 } 
 
-.blank-two { 
+.score-display {  
+    text-align: center;
+    font-size: 45px;  
+    font-weight: 500; 
     height: 138px;
     width: 158px;
 } 
 
-.computer-won { 
-    background-color: red;
-}
-
-.player-won { 
-    background-color: rgb(19, 194, 19);
-}

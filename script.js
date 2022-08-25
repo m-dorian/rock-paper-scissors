@@ -4,6 +4,9 @@ let winner;
 let playerScore = 0;
 let computerScore = 0; 
 
+const scoreDisplay = document.querySelector('.score-display'); 
+scoreDisplay.textContent = `Score: ${playerScore} - ${computerScore}`;
+
 function getRandomInteger (min, max) { 
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -98,7 +101,9 @@ window.addEventListener('click', function(e){
 const playButton = document.querySelector('.play-button'); 
 
 playButton.addEventListener('click', function(){ 
-    const winnerDisplay = document.querySelector('.winner-display');
+    const winnerDisplay = document.querySelector('.winner-display'); 
+    const scoreDisplay = document.querySelector('.score-display'); 
+
     if(typeof(playerChoice) == 'undefined') { 
         alert('You have to choose a weapon before you can play!'); 
     } 
@@ -121,5 +126,8 @@ playButton.addEventListener('click', function(){
         break; 
         
         
-    }
-})
+    } 
+    getScore(); 
+scoreDisplay.textContent = `Score: ${playerScore} - ${computerScore}`;
+      
+}) 
