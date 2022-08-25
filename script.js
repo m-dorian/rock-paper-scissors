@@ -3,8 +3,10 @@ let playerChoice;
 let winner; 
 let playerScore = 0;
 let computerScore = 0; 
-
+const resetButton = document.querySelector('.reset-button'); 
 const scoreDisplay = document.querySelector('.score-display'); 
+const playButton = document.querySelector('.play-button'); 
+
 scoreDisplay.textContent = `Score: ${playerScore} - ${computerScore}`;
 
 function getRandomInteger (min, max) { 
@@ -29,16 +31,6 @@ function getComputerChoice() {
     } 
     return computerChoice;
 } 
-function getPlayerChoice() { 
-    let tempPlayerChoice = prompt("What weapon do you select? Rock, paper or scissors?!");
-    // Make user input case insensitive //
-    playerChoice = tempPlayerChoice.toUpperCase(); 
-     if(playerChoice === "ROCK" || playerChoice === "PAPER" || playerChoice === "SCISSORS") { 
-        alert("Valid! You can play the game!")
-    } else alert("Invalid! Try again") 
-    return playerChoice;
-    
-}
 function getWinner() { 
      
     switch(playerChoice) { 
@@ -98,8 +90,6 @@ window.addEventListener('click', function(e){
     }
 }) 
 
-const playButton = document.querySelector('.play-button'); 
-
 playButton.addEventListener('click', function(){ 
     const winnerDisplay = document.querySelector('.winner-display'); 
     const scoreDisplay = document.querySelector('.score-display'); 
@@ -131,8 +121,6 @@ playButton.addEventListener('click', function(){
 scoreDisplay.textContent = `Score: ${playerScore} - ${computerScore}`;
       
 }) 
-
-const resetButton = document.querySelector('.reset-button'); 
 
 resetButton.addEventListener('click', () => { 
     window.location.reload();
